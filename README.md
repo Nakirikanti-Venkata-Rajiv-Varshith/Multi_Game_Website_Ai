@@ -9,6 +9,13 @@ A modern, glassmorphic React application combining:
 
 ---
 
+## 📸 Dashboard Preview
+
+<img src="assets/dashboard.png" width="1000"/>
+
+---
+
+
 ## 🚀 Features
 
 ### 🔢 N-Puzzle Solver
