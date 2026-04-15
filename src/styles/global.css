@@ -1,0 +1,241 @@
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+
+    background: radial-gradient(circle at 20% 30%, #6c5ce7 0%, transparent 40%),
+        radial-gradient(circle at 30% 80%, #fd79a8 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, #016563 0%, transparent 40%),
+        #0f0f1a;
+
+    min-height: 100vh;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.main-layout {
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+    align-items: flex-start;
+}
+
+.left-panel {
+    display: flex;
+    /* flex-direction: column; */
+    gap: 20px;
+}
+
+.right-panel {
+    display: flex;
+    align-items: center;
+}
+
+
+.card {
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 22px;
+    padding: 22px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.4),
+        inset 0 0 10px rgba(255, 255, 255, 0.05);
+
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px) scale(1.01);
+}
+
+
+.grid {
+    display: grid;
+    gap: 12px;
+}
+
+.puzzle-grid {
+    padding: 30px;
+    border-radius: 24px;
+
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.tile {
+    width: 90px;
+    height: 90px;
+
+    background: linear-gradient(145deg, #2a2a3d8d, #1a1a2bd8);
+    border-radius: 18px;
+
+    font-size: 24px;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    box-shadow:
+        0 6px 15px rgba(0, 0, 0, 0.5),
+        inset 0 0 8px rgba(255, 255, 255, 0.05);
+
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.tile:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow:
+        0 12px 25px rgba(0, 0, 0, 0.6),
+        0 0 10px rgba(0, 206, 201, 0.6);
+}
+
+.empty {
+    background: transparent;
+    box-shadow: none;
+}
+
+
+.level-container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+button {
+    padding: 12px 18px;
+    border-radius: 14px;
+    border: none;
+
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+button:hover {
+    background: rgba(0, 206, 201, 0.2);
+    box-shadow: 0 0 10px rgba(0, 206, 201, 0.5);
+    transform: scale(1.05);
+}
+
+
+.control-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+
+    padding: 30px;
+    min-width: 240px;
+}
+
+
+.moves {
+    font-size: 22px;
+    font-weight: 600;
+
+    padding: 14px 22px;
+    border-radius: 16px;
+
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+
+.controls button {
+    width: 100%;
+    padding: 14px 0;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+.controls button:hover {
+    background: rgba(0, 206, 201, 0.25);
+    box-shadow: 0 0 12px rgba(0, 206, 201, 0.6);
+    transform: scale(1.03);
+}
+
+
+@media (max-width: 768px) {
+    .main-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .tile {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+.game-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 180px;
+}
+
+.options {
+  display: flex;
+  gap: 10px;
+}
+
+.game-panel button {
+  width: 100%;
+}
+
+.win {
+  background: linear-gradient(145deg, #00cec9, #00b894);
+  color: black;
+  box-shadow: 0 0 15px #00cec9;
+}
+
+.score {
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.08);
+}
+
+.winner {
+  font-size: 18px;
+  font-weight: bold;
+  color: #00cec9;
+}
+
+.tile.ai-move {
+  box-shadow: 0 0 15px #ff7675;
+}
+
+.control-panel button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+}
